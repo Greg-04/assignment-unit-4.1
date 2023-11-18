@@ -66,33 +66,17 @@ console.log('Last item', getLast(colors));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let integers = [4, 8, 6, 2];
-let magicNumber = 2;
+let magicNumber = 6;
 
-  // This passes the test but the if is not written correctly
-  function find(value, array) {
-  for (i = 0; i < array.length; i++) {
-    console.log(array[i]);
-  } if (i === value) {
+function find(value, array) {
+for (let i = 0; i < array.length; i++) {
+  console.log('Loop', array[i]);
+  if (array[i] === value) {
     return true;
-  } else{
-    return false;
-  }
-  }
-
-// the if is correct however this will always return will default to false
-
-// function find(value, array) {
-// for (let i = 0; i < array.length; i++) {
-//   console.log('Loop', array[i]);
-//   if (array[i] === value) {
-//     return true;
-//   } else {
-  //   return false;
-  // }
- // }
-//}
-
-
+  } 
+ }
+  return false;
+}
 
 console.log(find(magicNumber, integers));
 
